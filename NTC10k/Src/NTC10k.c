@@ -5,13 +5,10 @@
  *      Author: Bania
  */
 
-#include "math.h"
-
 #include "NTC10k.h"
 
 float NTC_Convert(uint16_t value)
 {
-	const float maxADC = 4095.0;
 	const float resistor = 10000;
 	const float nominalResistance = 10000;
 	const float nominalTemperature = 25;
@@ -19,7 +16,7 @@ float NTC_Convert(uint16_t value)
 
 	float resistance, steinhart;
 
-	resistance = resistor * (maxADC / (float)value - 1.0);
+	resistance = resistor * (4030.0 / (float)value - 1.0);
 
 	steinhart = resistance / nominalResistance;
 	steinhart = log(steinhart);

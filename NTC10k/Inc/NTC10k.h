@@ -8,7 +8,7 @@
 #ifndef NTC10K_H_
 #define NTC10K_H_
 
-#include "main.h"
+#include "math.h"
 
 float NTC_Convert(uint16_t value);
 

@@ -16,7 +16,7 @@ float NTC_Convert(uint16_t value)
 
 	float resistance, steinhart;
 
-	resistance = resistor * (4030.0 / (float)value - 1.0);
+	resistance = resistor * (4095.0 / (float)value - 1.0);
 
 	steinhart = resistance / nominalResistance;
 	steinhart = log(steinhart);

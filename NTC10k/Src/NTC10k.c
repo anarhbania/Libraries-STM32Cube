@@ -11,7 +11,7 @@
 
 float NTC_Convert(uint16_t value)
 {
-	const float maxADC = 4095.0
+	const float maxADC = 4095.0;
 	const float resistor = 10000;
 	const float nominalResistance = 10000;
 	const float nominalTemperature = 25;

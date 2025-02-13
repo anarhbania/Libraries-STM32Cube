@@ -12,4 +12,4 @@
 
 float NTC_Convert(uint16_t value);
 
-#endif
+#endif /* NTC10K_H_ */

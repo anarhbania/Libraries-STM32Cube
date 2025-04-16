@@ -39,19 +39,34 @@ void ConversionClass::floatToByteArray(float value, uint8_t *array)
 	array[3] = (*b);
 }
 
-uint16_t ConversionClass::byteToShort(uint8_t byte0, uint8_t byte1)
+uint16_t ConversionClass::byteToShort(const uint8_t byte0, const uint8_t byte1)
 {
 	return (uint16_t)((byte1 << 8) | (byte0));
 }
 
-uint32_t ConversionClass::byteToInt(uint8_t byte0, uint8_t byte1, uint8_t byte2, uint8_t byte3)
+uint32_t ConversionClass::byteToInt(const uint8_t byte0, const uint8_t byte1, const uint8_t byte2, const uint8_t byte3)
 {
 	return (uint32_t)((byte3 << 24) | (byte2 << 16) | (byte1 << 8) | (byte0));
 }
 
-float ConversionClass::byteToFloat(uint8_t byte0, uint8_t byte1, uint8_t byte2, uint8_t byte3)
+float ConversionClass::byteToFloat(const uint8_t byte0, const uint8_t byte1, const uint8_t byte2, const uint8_t byte3)
 {
 	return (float)((byte3 << 24) | (byte2 << 16) | (byte1 << 8) | (byte0));
+}
+
+int32_t ConversionClass::StringToInt(const char *buffer)
+{
+	return atoi(buffer);
+}
+
+int32_t ConversionClass::StringToLong(const char *buffer)
+{
+	return atol(buffer);
+}
+
+float ConversionClass::StringToFloat(const char *buffer)
+{
+	return atof(buffer);
 }
 
 ConversionClass Conversion;
